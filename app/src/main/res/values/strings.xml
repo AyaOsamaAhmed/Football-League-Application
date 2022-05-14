@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Football-League-Application</string>
+    <string name="dialog_please_waiting">Please Waiting......</string>
 </resources>
