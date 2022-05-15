@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Football-League-Application</string>
     <string name="dialog_please_waiting">Please Waiting......</string>
+    <string name="sorry_the_server_doesn_t_have_data">Sorry The server Dosen\'t have data</string>
 </resources>

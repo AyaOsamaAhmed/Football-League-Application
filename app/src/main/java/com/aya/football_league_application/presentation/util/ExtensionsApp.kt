@@ -1,5 +1,6 @@
 package com.aya.football_league_application.presentation.util
 
+import android.view.View
 import com.aya.football_league_application.presentation.ui.MultiDexApp
 import com.aya.football_league_application.presentation.util.Constant.LANGUAGE
 import java.util.*
@@ -14,6 +15,16 @@ fun getSharedPrefInstance(): SharedPrefsHelper {
         MultiDexApp.sharedPrefsHelper!!
     }
 }
+
+
+fun View.show() {
+    visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    visibility = View.GONE
+}
+
 
 
 
