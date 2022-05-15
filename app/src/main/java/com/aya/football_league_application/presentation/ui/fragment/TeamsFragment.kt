@@ -12,6 +12,7 @@ import com.aya.football_league_application.databinding.FragmentHomeBinding
 import com.aya.football_league_application.databinding.FragmentTeamBinding
 import com.aya.football_league_application.presentation.ui.activity.MainActivity
 import com.aya.football_league_application.presentation.ui.adapter.AdapterHome
+import com.aya.football_league_application.presentation.ui.adapter.AdapterTeam
 import com.aya.football_league_application.presentation.ui.viewModel.HomeViewModel
 import com.aya.football_league_application.presentation.util.hide
 import com.aya.football_league_application.presentation.util.show
@@ -48,7 +49,7 @@ class TeamsFragment : Fragment() {
                         is TeamsResponse -> {
                                 it.teams.let { data ->
                                     if (data != null){
-
+                                        adapterTeam = AdapterTeam(data)
                                     }else{
                                         lyNoHaveData.show()
                                     }} } } }

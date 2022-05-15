@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
     <variable
-        name="adapterHome"
-        type="com.aya.football_league_application.presentation.ui.adapter.AdapterHome" />
+        name="adapterTeam"
+        type="com.aya.football_league_application.presentation.ui.adapter.AdapterTeam" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,8 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="4dp"
-        app:adapter="@{adapterHome}"
-        tools:listitem="@layout/item_list_home"
+        app:adapter="@{adapterTeam}"
+        tools:listitem="@layout/item_list_team"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="10"
         app:layout_constraintTop_toTopOf="parent"
