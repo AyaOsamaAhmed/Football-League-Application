@@ -2,4 +2,11 @@
     <string name="app_name">Football-League-Application</string>
     <string name="dialog_please_waiting">Please Waiting......</string>
     <string name="sorry_the_server_doesn_t_have_data">Sorry The server Dosen\'t have data</string>
+    <string name="code">Code:</string>
+    <string name="team_name">Team Name:</string>
+    <string name="List_screen">List Screen</string>
+    <string name="details_screen">Details Screen</string>
+    <string name="team_screen">Team Screen</string>
+    <string name="seasons">Current Season</string>
+    <string name="team">Teams</string>
 </resources>

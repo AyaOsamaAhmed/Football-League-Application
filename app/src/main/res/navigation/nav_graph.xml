@@ -5,10 +5,44 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/HomeFragment">
 
-<fragment
-    android:id="@+id/HomeFragment"
-    android:name="com.aya.football_league_application.presentation.ui.fragment.HomeFragment"
-    tools:layout="@layout/fragment_home"
-    />
+      <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.aya.football_league_application.presentation.ui.fragment.HomeFragment"
+          android:label="@string/List_screen"
+        tools:layout="@layout/fragment_home"
+        >
+          <action
+              android:id="@+id/HomeFragment_to_DetailsHomeFragment"
+              app:destination="@id/DetailsHomeFragment"
+              >
+              <argument
+                  android:name="id"
+                  app:argType="integer"
+                  />
+          </action>
+      </fragment>
 
+    <fragment
+        android:id="@+id/DetailsHomeFragment"
+        android:name="com.aya.football_league_application.presentation.ui.fragment.DetailsHomeFragment"
+        android:label="@string/details_screen"
+        tools:layout="@layout/fragment_details_home"
+        >
+        <action
+            android:id="@+id/DetailsHomeFragment_to_TeamsFragment"
+            app:destination="@id/TeamsFragment"
+            >
+            <argument
+                android:name="id"
+                app:argType="integer"
+                />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/TeamsFragment"
+        android:name="com.aya.football_league_application.presentation.ui.fragment.TeamsFragment"
+        android:label="@string/team_screen"
+        tools:layout="@layout/fragment_home"
+        />
 </navigation>

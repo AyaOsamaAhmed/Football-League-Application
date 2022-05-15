@@ -5,24 +5,21 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.aya.football_league_application.R
-import com.aya.football_league_application.data.response.DataCompetitions
-import com.aya.football_league_application.databinding.ItemListHomeBinding
+import com.aya.football_league_application.data.response.SeasonsResponse
+import com.aya.football_league_application.databinding.ItemSeasonBinding
 import com.aya.football_league_application.presentation.ui.interfaces.onClick
+import com.aya.football_league_application.presentation.util.setGlideImageUrl
 
-class AdapterHome(
-    private var Models: ArrayList<DataCompetitions>,
+class AdapterSeasons(
+    private var Models: ArrayList<SeasonsResponse>,
     private val onclick: onClick
-) : RecyclerView.Adapter<AdapterHome.ViewHolderSlider>() {
+) : RecyclerView.Adapter<AdapterSeasons.ViewHolderSlider>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderSlider {
-        val binding: ItemListHomeBinding = DataBindingUtil.inflate(
+        val binding: ItemSeasonBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
-            R.layout.item_list_home, parent, false
+            R.layout.item_season, parent, false
         )
-      /*  binding.root.layoutParams = ConstraintLayout.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT
-        )*/
         return ViewHolderSlider(binding)
     }
 
@@ -33,15 +30,18 @@ class AdapterHome(
     override fun onBindViewHolder(holder: ViewHolderSlider, position: Int) {
         val model = Models[position]
         holder.bind(model)
+        if(model.winner != null)
+        holder.itemRowBinding.imgSeason.setGlideImageUrl(model.winner.crestUrl,holder.itemRowBinding.progress)
+
         holder.itemRowBinding.layout.setOnClickListener {
             onclick.onClickChoose()
         }
     }
 
-    class ViewHolderSlider(binding: ItemListHomeBinding) :
+    class ViewHolderSlider(binding: ItemSeasonBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        var itemRowBinding: ItemListHomeBinding = binding
-        fun bind(model: DataCompetitions?) {
+        var itemRowBinding: ItemSeasonBinding = binding
+        fun bind(model: SeasonsResponse?) {
             itemRowBinding.model = model
             itemRowBinding.executePendingBindings()
         }

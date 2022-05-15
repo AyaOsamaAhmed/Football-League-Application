@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/drawable-v24/background_item_adapter.xml" value="0.10092592592592593" />
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/drawable/background_item_season_adapter.xml" value="0.1" />
         <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/item_list_home.xml" value="0.2" />
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/fragment_details_home.xml" value="0.2" />
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/fragment_team.xml" value="0.2" />
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/item_list_home.xml" value="0.33" />
+        <entry key="..\:/projects/FootballLeagueApplication/app/src/main/res/layout/item_season.xml" value="0.2" />
       </map>
     </option>
   </component>

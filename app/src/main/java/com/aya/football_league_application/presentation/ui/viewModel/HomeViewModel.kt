@@ -14,5 +14,13 @@ class HomeViewModel : ViewModel() {
         return  retrofitHandler.requestHome()
     }
 
+    fun requestDetailHome(compitation_id:Int): LiveData<Any> {
+        return  retrofitHandler.requestDetailHome(compitation_id)
+    }
+
+    fun requestTeams(compitation_id:Int): LiveData<Any> {
+        return  retrofitHandler.requestTeams(compitation_id)
+    }
+
 
 }

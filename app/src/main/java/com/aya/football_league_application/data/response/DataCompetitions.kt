@@ -25,6 +25,10 @@ data class DataCompetitions (
     @field:SerializedName("currentSeason")
     val currentSeason: CurrentResponse? = null,
 
+    @field:SerializedName("seasons")
+    val seasons: ArrayList<SeasonsResponse>? = null,
+
+
     @field:SerializedName("numberOfAvailableSeasons")
     val numberOfAvailableSeasons: String? = null,
 
